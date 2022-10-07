@@ -24,7 +24,7 @@
     - #### Link : https://leetcode.com/problems/longest-substring-without-repeating-characters/
     - #### Languages:
         - [X] C++
-        - [ ] Python
+        - [X] Python
         - [ ] Java
         - [X] JS
 -  ### Partition to K Equal Sum Subsets
