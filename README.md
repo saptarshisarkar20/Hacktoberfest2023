@@ -2,7 +2,7 @@
 
 Here you will find Data Structures Algorithms and CompetetiveProgramming  Related Problems in Multiple Languages (C , C++ , Python etc)
 
-# HacktoberFest 2022
+# HacktoberFest 2023
 ![image](https://user-images.githubusercontent.com/64575577/193452407-791d65ac-1b5c-4971-a09b-e155b57e3997.png)
 
 ## HacktoberFest - Contribute to Open Source
