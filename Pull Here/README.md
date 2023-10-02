@@ -4,13 +4,13 @@
     - #### Languages:
         - [X] C++
         - [X] Python
-        - [ ] Java
+        - [X] Java
 -  ### SHROUTE
     - #### Link :  https://www.codechef.com/JUNE21B/problems/SHROUTE
     - #### Languages:
         - [X] C++
         - [X] Python
-        - [ ] Java
+        - [X] Java
 -  ### BITTUP
     - #### Link :  https://www.codechef.com/JUNE21B/problems/BITTUP
     - #### Languages:
