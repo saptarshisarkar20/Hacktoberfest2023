@@ -1,0 +1,121 @@
+//********************************************** Merge Sort In c++ ****************************************//
+
+#include<iostream>
+using namespace std;
+
+// This merge function using the approach 1 that is to divide the array into subarray
+// void merge(int *arr,int start,int end){
+     
+//      int mid = start + (end-start)/2;
+
+//         int length1  = mid - start+1;
+//         int length2 = end-mid;
+
+//         int* array1 = new int[length1];  
+//         int* array2 = new int[length2];
+        
+//         //Copy the array from main array to the second half array
+//         int firstArray = start;
+//         for(int i=0;i<length1;i++){
+                  
+//              array1[i] = arr[firstArray++];     
+
+//         }
+//          // Copy the array from main array to the second half array
+//           firstArray = mid+1;
+//         for(int i=0;i<length2;i++){
+
+//             array2[i] = arr[firstArray++];
+//         }
+         
+//         // Here merge the two sorted array  by using this method 
+//            int index1 = 0;
+//            int index2 = 0;
+//           firstArray = start;
+           
+//            while(index1 < length1  &&  index2  <  length2){
+//                     if(array1[index1]<array2[index2]){
+//                         arr[firstArray++] = array1[index1++];
+//                     }
+//                     else{
+//                         arr[firstArray++] = array2[index2++];
+//                     }
+
+//            }
+
+//            // condition if some elements of array first is left
+//              while(index1 < length1){
+//                 arr[firstArray++] = array1[index1++];
+//              }
+
+//            // condition if some elements of array first is right  
+//              while(index2 < length2){
+//                 arr[firstArray++] = array2[index2++];
+//              }
+
+// }
+
+//  Merge Funtion using the 2nd Approach which is play by the indexing concept..........
+void merge(int arr[], int start, int mid, int end)
+{
+    int start2 = mid + 1;
+ 
+    // If the direct merge is already sorted
+    
+    // if (arr[mid] <= arr[start2]) {
+    //     return;
+    // }
+ 
+    // Two pointers to maintain start
+    // of both arrays to merge
+    while (start <= mid && start2 <= end) {
+ 
+        // If element 1 is in right place
+        if (arr[start] <= arr[start2]) {
+            start++;
+        }
+        else {
+            int value = arr[start2];
+            int index = start2;
+ 
+            // Shift all the elements between element 1
+            // element 2, right by 1.
+            while (index != start) {
+                arr[index] = arr[index - 1];
+                index--;
+            }
+            arr[start] = value;
+ 
+            // Update all the pointers
+            start++;
+            mid++;
+            start2++;
+        }
+    }
+}
+ 
+
+void mergeSort(int *arr,int start, int end){
+
+     if(start >=  end)
+       return ;
+
+    int mid  = start +(end-start)/2;
+     mergeSort(arr,start,mid);
+     mergeSort(arr,mid+1,end);
+     merge(arr,start,mid,end);  
+}
+
+
+int main(){
+
+  int arr[10] = {344,56,445,7,78,44,577,96,45,23};
+  int size = 10;
+
+  mergeSort(arr,0,size-1);
+
+  for(int i=0;i<size;i++){
+    cout<<arr[i]<<" ";
+  }
+
+}
